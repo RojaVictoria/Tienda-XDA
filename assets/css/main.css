@@ -1,0 +1,263 @@
+/* Reset*/
+body, html * {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Base Typography*/
+h1, h2, h3 {
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+}
+
+h4, h5, h6, p, a {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Base Styles*/
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template: 65px 1fr 1fr 1fr/100%;
+  grid-template-areas: "navigation" "hero-section" "main" "footer";
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template: 78px 1fr 1fr 1fr/100%;
+    grid-template-areas: "navigation" "hero-section" "main" "footer";
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    grid-template: 78px 1fr 1fr/42% 58%;
+    grid-template-areas: "navigation navigation" "main hero-section" "footer hero-section";
+  }
+}
+.navigation {
+  grid-area: navigation;
+}
+
+.hero-section {
+  grid-area: hero-section;
+}
+
+.main-section {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* Navigation Layout */
+.navigation {
+  position: relative;
+  background-color: #FFF;
+}
+.navigation__logo {
+  background-color: #0C0910;
+  color: #FFF;
+  position: absolute;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1.1em;
+  padding-bottom: 1.1em;
+}
+.navigation__container {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.navigation__item a {
+  display: block;
+  text-align: right;
+  padding: 0.5em;
+  padding-right: 2.5em;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0C0910;
+  text-decoration: none;
+  background-color: #ECECEC;
+}
+
+.collapsible {
+  text-align: right;
+}
+.collapsible label {
+  display: block;
+  padding-top: 0.6em;
+  padding-bottom: 0.5em;
+  padding-right: 1.5em;
+  font-size: 1.8rem;
+}
+
+#menu {
+  display: none;
+}
+
+input:checked ~ .navigation__container {
+  max-height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .navigation__logo {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+
+  .collapsible label {
+    display: none;
+  }
+
+  .navigation__container {
+    max-height: 100%;
+  }
+
+  .navigation__list {
+    display: flex;
+    justify-content: flex-end;
+    margin: inherit;
+    padding: inherit;
+    list-style-type: none;
+  }
+
+  .navigation__item a {
+    background-color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0C0910;
+    padding-top: 2em;
+    padding-bottom: 0.75em;
+    padding-right: 2.5em;
+  }
+}
+/* Hero Section Layout */
+.hero-section {
+  background: url("../../../assets/img/imagen1.png");
+  height: 305px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-section {
+    height: 400px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hero-section {
+    height: 100%;
+  }
+}
+/* Main section Layout */
+.main-section {
+  margin: 3em;
+}
+.main-section__title {
+  font-size: 30px;
+}
+.main-section__content {
+  color: #646266;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-top: 0.4em;
+}
+.main-section__button {
+  background-color: #FFF;
+  /* Green */
+  border: 2px solid #0C0910;
+  color: #0C0910;
+  font-weight: 700;
+  padding: 0.5em 2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 1em;
+  cursor: pointer;
+}
+.main-section__button:hover {
+  border: 2px solid #A6A5A8;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-section {
+    margin: 5em;
+  }
+  .main-section__title {
+    font-size: 50px;
+  }
+}
+/* Newsletter Layout */
+.footer {
+  position: relative;
+  background-color: #0C0910;
+  color: #FFF;
+  padding: 1.5em 3em;
+}
+.footer__title {
+  font-size: 20px;
+}
+.footer__label {
+  color: #D1D1D1;
+  display: block;
+  padding-top: 0.2em;
+}
+.footer__suscribe {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 3em;
+  background-color: #FFF;
+  color: #0C0910;
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+  font-size: 18px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+}
+.footer__suscribe h3 {
+  color: #0C0910;
+  font-weight: 700;
+  font-size: 18px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+  padding-right: 1em;
+}
+
+input {
+  width: 80%;
+  padding: 0.5em;
+  margin-right: 0.5em;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    padding: 2em 5em;
+  }
+  .footer__title {
+    font-size: 30px;
+  }
+}
+/* Buttons component */
+/* Paginacion component */
+
+/*# sourceMappingURL=main.css.map */

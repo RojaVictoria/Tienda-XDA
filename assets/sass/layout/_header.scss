@@ -1,0 +1,19 @@
+/* Hero Section Layout */
+.hero-section {
+    background: url('../../../assets/img/imagen1.png');
+    height: 305px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (min-width: 768px) { 
+    .hero-section {
+        height: 400px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .hero-section {
+        height: 100%;
+    }
+}

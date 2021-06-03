@@ -1,0 +1,55 @@
+/* Newsletter Layout */
+.footer {
+    position: relative;
+    background-color: $smoky-black;
+    color: $white;
+    padding: 1.5em 3em;
+    &__title {
+        font-size: $x-large;
+    }
+    &__label {
+        color: $light-gray;
+        display: block;
+        padding-top: 0.2em;
+    }
+    &__suscribe {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 3em;
+        background-color: $white;
+        color: $smoky-black;
+        font-family: $old-standard;
+        font-weight: $bold;
+        font-size: $large;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        text-align: center;
+        h3 {
+            color: $smoky-black;
+            font-weight: $bold;
+            font-size: $large;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            text-align: center;
+            padding-right: 1em;
+        }
+    }
+}
+
+input {
+    width: 80%;
+    padding: .5em;
+    margin-right: .5em;
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 768px) { 
+    .footer {
+        padding: 2em 5em;
+        &__title {
+            font-size: $xx-large;
+        }
+    }    
+}
