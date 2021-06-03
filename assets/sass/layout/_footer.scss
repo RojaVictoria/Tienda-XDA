@@ -12,7 +12,7 @@
         display: block;
         padding-top: 0.2em;
     }
-    &__suscribe {
+    &__suscribe { /* Suscribir vertical */
         position: absolute;
         right: 0;
         top: 0;
@@ -36,13 +36,6 @@
             padding-right: 1em;
         }
     }
-}
-
-input {
-    width: 80%;
-    padding: .5em;
-    margin-right: .5em;
-    box-sizing: border-box;
 }
 
 @media only screen and (min-width: 768px) { 

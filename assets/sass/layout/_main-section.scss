@@ -10,22 +10,6 @@
         line-height: 1.6;
         padding-top: .4em;
     }
-    &__button {
-        background-color: $white; /* Green */
-        border: 2px solid $smoky-black;
-        color: $smoky-black;
-        font-weight: $bold;
-        padding: 0.5em 2em;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin-top: 1em;
-        cursor: pointer;
-        &:hover {
-            border: 2px solid $quick-silver;
-        }
-    }
 }
 
 @media only screen and (min-width: 768px) { 
